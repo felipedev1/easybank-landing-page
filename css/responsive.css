@@ -98,6 +98,10 @@
   .footer .nav-footer .footer-left {
     width: 100%;
   }
+
+  footer .nav-footer .footer-left > div {
+    margin-right: 0;
+  }
 }
 
 @media(max-width: 662px){
