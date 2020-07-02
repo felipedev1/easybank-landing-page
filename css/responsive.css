@@ -2,6 +2,7 @@
   .menu .toggle-menu {
     display: none;
   }
+  
 }
 
 @media(max-width: 850px) {
@@ -105,9 +106,13 @@
 }
 
 @media(max-width: 662px){
-  #why-choose-easybank .topics .topic ,
-  #latest-articles .articles .article {
-    width: 100%;
+  #why-choose-easybank .topics ,
+  #latest-articles .articles  {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  
+  #why-choose-easybank .topics {
+    text-align: center;
   }
 }
 

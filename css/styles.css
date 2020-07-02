@@ -208,16 +208,9 @@ header {
 #why-choose-easybank .topics,
 #latest-articles .articles {
   width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-#why-choose-easybank .topics .topic,
-#latest-articles .articles .article {
-  margin-right: 10px;
-  margin-bottom: 40px;
-  width: 255px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 40px 10px;
 }
 
 #why-choose-easybank .topics .topic * + * {
@@ -252,7 +245,8 @@ header {
 
 #latest-articles .articles .article img {
   width: 100%;
-  height: 50%;
+  height: 30vh;
+  object-fit: cover;
 }
 
 #latest-articles .articles .article span {
