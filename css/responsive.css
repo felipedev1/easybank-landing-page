@@ -96,11 +96,13 @@
     margin-bottom: 20px;
   }
 
-  .footer .nav-footer .footer-left {
+  .footer .nav-footer .footer-left,
+  .footer .nav-footer .footer-right {
     width: 100%;
   }
 
-  footer .nav-footer .footer-left > div {
+
+  .footer .nav-footer .footer-left > div {
     margin-right: 0;
   }
 }
