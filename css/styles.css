@@ -40,7 +40,7 @@ p, span {
   color: var(--grayish-blue);
 }
 
-ul {
+.menu-section {
   list-style: none;
 }
 
@@ -49,7 +49,7 @@ a, a:hover {
 }
 
 header {
-  height: 100vh;
+  min-height: 100vh;
   background-color: aquamarine;
 }
 .nav-menu {
@@ -59,6 +59,8 @@ header {
   background-color: white;
   box-shadow: 1px 0 3px rgba(88, 86, 86, .5);
   z-index: 9999999 !important;
+  transition: .2s linear;
+  transition-property: opacity, height;
 }
 
 .container {
@@ -71,25 +73,26 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: relative;
 }
 
-.menu ul{
+.menu .menu-section{
  display: flex;
  height: 100%;
 }
 
-.menu ul li {
+.menu .menu-section li {
   display: flex;
   align-items: center;
   height: 100%;
   position: relative;
 }
 
-.menu ul li + li {
+.menu .menu-section li + li {
   margin-left: 20px;
 }
 
-.menu ul li::before {
+.menu .menu-section li::before {
   content: "";
   position: absolute;
   bottom: 0;
@@ -101,18 +104,33 @@ header {
   transition-property: left, right;
 }
 
-.menu ul li:hover::before {
+.menu .menu-section li:hover::before {
   left: 0;
   right: 0;
 }
 
-.menu ul li a {
+.menu .menu-section li a {
   color: var(--grayish-blue);
   transition: color .5s ease;
 }
 
-.menu ul li:hover a {
+.menu .menu-section li:hover a {
   color: var(--dark-blue);
+}
+
+.menu .toggle-menu {
+  outline: none;
+  border: none;
+  background: transparent;
+}
+
+.menu .toggle-menu span {
+  display: block;
+  margin-bottom: 4px;
+  height: 1px;
+  width: 27px;
+  background-color: black;
+  transition: transform .3s;
 }
 
 .button {
@@ -137,7 +155,7 @@ header {
 }
 
 .intro-content {
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   align-items: center;
 }
@@ -151,7 +169,7 @@ header {
 }
 
 .intro .intro-text p {
-  margin: 40px 0;
+  margin: 4rem 0;
   color: var(--grayish-blue);
 }
 
@@ -162,8 +180,14 @@ header {
   top: -10%;
 }
 
+.intro,
+#why-choose-easybank,
+#latest-articles {
+  padding: 11vh 0;
+}
+
 #why-choose-easybank {
-  height: 100vh;
+  min-height: 100vh;
   background-color: var(--light-grayish-blue);
   display: flex;
   align-items: center;
@@ -186,12 +210,14 @@ header {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 #why-choose-easybank .topics .topic,
 #latest-articles .articles .article {
-  max-width: 22.5%;
+  margin-right: 10px;
+  margin-bottom: 40px;
+  width: 255px;
 }
 
 #why-choose-easybank .topics .topic * + * {
@@ -209,7 +235,7 @@ header {
 }
 
 #latest-articles {
-  height: 100vh;
+  min-height: 100vh;
   background-color: var(--very-light-gray);
   display: flex;
   align-items: center;
@@ -226,7 +252,7 @@ header {
 
 #latest-articles .articles .article img {
   width: 100%;
-  height: 160px;
+  height: 50%;
 }
 
 #latest-articles .articles .article span {
@@ -245,7 +271,8 @@ header {
 .footer {
   position: relative;
   bottom: 0;
-  height: 30vh;
+  min-height: 30vh;
+  padding: 20px;
   background-color: var(--dark-blue);
   display: flex;
   align-items: center;
@@ -264,9 +291,12 @@ header {
 
 .footer .nav-footer .footer-left {
   height: 100%;
-  width: 50%;
   display: flex;
   justify-content: space-between;
+}
+
+.footer .nav-footer .footer-left > div {
+  margin-left: 30px;
 }
 
 .footer .nav-footer .footer-left > div,
@@ -277,11 +307,13 @@ header {
 }
 
 .footer .nav-footer .footer-right {
+  text-align: end;
   align-items: flex-end;
 }
 
 .footer .nav-footer .footer-left a {
   color: var(--white);
+  margin-bottom: 20px;
   transition: color .5s ease;
 }
 
@@ -296,6 +328,13 @@ header {
 
 
 .attribution {
+  color: var(--grayish-blue);
+  position: absolute;
+  bottom: 1px;
+  right: 3px;
+  border: 1px solid rgba(255,255, 255, .2);
+  padding: 1px 5px;
+  border-radius: 10px;
   font-size: 11px;
   text-align: end;
 }

@@ -7,11 +7,12 @@
   <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+
   <title>Frontend Mentor | Easybank landing page</title>
   <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/d7b67f4998.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/responsive.css">
 </head>
 
 <body>
@@ -19,7 +20,7 @@
     <nav class="nav-menu">
       <div class="menu container">
         <a class="logo" href="#"><img src="images/logo.svg" alt="logo"></a>
-        <ul>
+        <ul class="menu-section">
           <li><a href="#">Home</a></li>
           <li><a href="#">About</a></li>
           <li><a href="#">Contact</a></li>
@@ -27,10 +28,16 @@
           <li><a href="#">Careers</a></li>
         </ul>
         <a href="#" class="button">Request Invite</a>
+        <button class="toggle-menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
       </div>
     </nav>
     <section class="intro">
       <div class="container intro-content">
+        <img class="intro-mockups" src="images/image-mockups.png" alt="bg">
         <div class="intro-text">
           <h1>Next generation digital banking</h1>
           <p>
@@ -40,7 +47,6 @@
           <a href="#" class="button">Request Invite</a>
         </div>
       </div>
-      <img class="intro-mockups" src="images/image-mockups.png" alt="bg">
     </section>
   </header>
   <main>
@@ -91,7 +97,9 @@
             <img src="images/image-currency.jpg" alt="currency">
             <div class="article-description">
               <span class="author">By Claire Robinson</span>
-              <a href="#"><h3>Receive money in any currency with no fees</h3></a>
+              <a href="#">
+                <h3>Receive money in any currency with no fees</h3>
+              </a>
               <p>
                 The world is getting smaller and we’re becoming more mobile. So why should you be
                 forced to only receive money in a single …
@@ -102,7 +110,9 @@
             <img src="images/image-restaurant.jpg" alt="restaurant">
             <div class="article-description">
               <span class="author">By Wilson Hutton</span>
-              <a href="#"><h3>Treat yourself without worrying about money</h3></a>
+              <a href="#">
+                <h3>Treat yourself without worrying about money</h3>
+              </a>
               <p>
                 Our simple budgeting feature allows you to separate out your spending and set
                 realistic limits each month. That means you …
@@ -113,7 +123,9 @@
             <img src="images/image-plane.jpg" alt="plane">
             <div class="article-description">
               <span class="author">By Wilson Hutton</span>
-              <a href="#"><h3>Take your Easybank card wherever you go</h3></a>
+              <a href="#">
+                <h3>Take your Easybank card wherever you go</h3>
+              </a>
               <p>
                 We want you to enjoy your travels. This is why we don’t charge any fees on purchases
                 while you’re abroad. We’ll even show you …
@@ -124,7 +136,9 @@
             <img src="images/image-confetti.jpg" alt="confetti">
             <div class="article-description">
               <span class="author">By Claire Robinson</span>
-              <a href="#"><h3>Our invite-only Beta accounts are now live!</h3></a>
+              <a href="#">
+                <h3>Our invite-only Beta accounts are now live!</h3>
+              </a>
               <p>
                 After a lot of hard work by the whole team, we’re excited to launch our closed beta.
                 It’s easy to request an invite through the site ...
@@ -140,7 +154,7 @@
       <nav class="nav-footer">
         <div class="footer-left">
           <div>
-            <img src="images/logo-footer.svg" alt="logo">
+            <img src="images/logo-footer.svg" alt="logo" class="logo">
             <div class="social">
               <a href="#"><i class="fa fa-facebook fa-lg"></i></a>
               <a href="#"><i class="fa fa-youtube fa-lg"></i></a>
@@ -166,24 +180,13 @@
         </div>
       </nav>
     </div>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="https://github.com/felipedev1" target="_blank">FelipeDev</a>.
+    </div>
   </footer>
+  <script src="js/scripts.js"></script>
 
-
-  
-  
-  
-  
-  
-  
-
-  
-
-  
-
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
 </body>
 
 </html>
